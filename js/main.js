@@ -6,7 +6,18 @@ $(document).ready(function(){
 
         var strUrl = "https://viacep.com.br/ws/" + strCep + "/json/";
 
-
+        $.ajax({
+            url : strUrl,
+            type : "GET",
+            dataType : "JSON",
+            success : function(objData){
+                console.log(objData);
+            },
+            error : function(objError){
+                console.log(objError);
+            }
+            
+        });
 
     });
 
