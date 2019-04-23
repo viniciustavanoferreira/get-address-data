@@ -11,10 +11,16 @@ $(document).ready(function(){
             type : "GET",
             dataType : "JSON",
             success : function(objData){
-                console.log(objData);
+                $("#txtCidade").val(objData.localidade);
+                $("#txtEstado").val(objData.uf);
+                $("#txtBairro").val(objData.bairro);
+                $("#txtRua").val(objData.logradouro);
+                $("#txtComplemento").val(objData.complemento);
+                
             },
             error : function(objError){
                 console.log(objError);
+
             }
             
         });
